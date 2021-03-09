@@ -11,4 +11,45 @@
     <color name="tab_normal">#545357</color>
     <color name="tab_select">#7972FE</color>
     <color name="tab_view_bg_color">#F9F9F9</color>
+
+
+    <!--消息列表标题文字、toast提示、重点文本-->
+    <color name="title_text_color">#000000</color>
+    <!--标题（navigation bar、列表）、正文-->
+    <color name="title_content_color">#181818</color>
+    <!--辅助文本1（弹窗、操作栏辅助文本）-->
+    <color name="content_text_1_color">#929292</color>
+    <!--辅助文本2（搜索栏提醒文字）-->
+    <color name="content_text_2_color">#8e8e93</color>
+    <!--辅助文本3（消息列表消息内容文本）-->
+    <color name="content_text_3_color">#9b9b9b</color>
+    <!--辅助文本4（消息详情时间文本）-->
+    <color name="content_text_4_color">#5a5a5a</color>
+    <!--辅助文本5（消息列表时间文本）-->
+    <color name="content_text_5_color">#b2b2b2</color>
+    <!--辅助文本6（在背景色#ededed上）-->
+    <color name="content_text_6_color">#5f5f5f</color>
+    <!--辅助文本7（在背景色#ededed上辅助文字、表单备注文字、群昵称）-->
+    <color name="content_text_7_color">#7f7f7f</color>
+    <!-- 全局搜索-->
+    <color name="content_text_8_color">#ff333333</color>
+    <color name="content_text_9_color">#ff7f7f7f</color>
+    <!--按钮文本-->
+    <color name="btn_color">#8b83ff</color>
+    <!--提醒文字、高亮文本-->
+    <color name="text_highlight_color">#6760ef</color>
+    <!--链接文字-->
+    <color name="text_link1_color">#576b95</color>
+    <!--链接文字-->
+    <color name="text_link2_color">#2782d6</color>
+    <!--警示文字-->
+    <color name="text_caution_color">#fd4948</color>
+    <!--有人@我-->
+    <color name="text_about_me_color">#db2812</color>
+    <!--@所有人-->
+    <color name="text_about_all_color">#9b9b9b</color>
+    <!-- 群通知 -->
+    <color name="text_group_notice_color">#FF7970FE</color>
+
+    <color name="color_split_line_d9d9d9">#d9d9d9</color>
 </resources>

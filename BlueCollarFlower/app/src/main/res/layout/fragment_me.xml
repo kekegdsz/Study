@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".base.MeFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".base.MeFragment">
 
 
-</FrameLayout>
+        <com.kekegdsz.bluecollar.widget.CommonListItemView
+            android:id="@+id/item_key_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.kekegdsz.bluecollar.widget.CommonListItemView
+            android:id="@+id/item_key_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>
