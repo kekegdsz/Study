@@ -1,12 +1,16 @@
-package com.kekegdsz.bluecollar;
+package com.kekegdsz.bluecollar.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.kekegdsz.bluecollar.R;
 import com.kekegdsz.bluecollar.adapter.BasePagerAdapter;
 import com.kekegdsz.bluecollar.base.BaseFragment;
+import com.kekegdsz.bluecollar.base.HomeFragment;
+import com.kekegdsz.bluecollar.base.MeFragment;
+import com.kekegdsz.bluecollar.base.MoneyFragment;
 import com.kekegdsz.bluecollar.widget.tablayout.TabItem;
 import com.kekegdsz.bluecollar.widget.tablayout.TabLayout;
 
@@ -46,9 +50,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabCl
         items.add(new TabItem(0, 0, mTitleTexts[0]));
         items.add(new TabItem(0, 0, mTitleTexts[1]));
         items.add(new TabItem(0, 0, mTitleTexts[2]));
-        mFragmentList.add(new BaseFragment());
-        mFragmentList.add(new BaseFragment());
-        mFragmentList.add(new BaseFragment());
+        mFragmentList.add(new HomeFragment());
+        mFragmentList.add(new MoneyFragment());
+        mFragmentList.add(new MeFragment());
         tabLayout.initData(items, this);
         mMainPagerAdapter = new BasePagerAdapter(getSupportFragmentManager(), mFragmentList);
         viewPager.setAdapter(mMainPagerAdapter);

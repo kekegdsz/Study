@@ -4,6 +4,4 @@
     <string name="tab_home_page">招聘</string>
     <string name="tab_money_page">省钱</string>
     <string name="tab_me_page">我</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
