@@ -3,6 +3,14 @@ buildscript {
     repositories {
         google()
         jcenter()
+        // 阿里百川
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        // 友盟
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        // 阿里镜像
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        // 商城
+        maven { url 'https://raw.githubusercontent.com/houhoudev/repository/master' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.1"
@@ -17,9 +25,13 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+        // 阿里百川
         maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        // 友盟
         maven { url 'https://dl.bintray.com/umsdk/release' }
+        // 阿里镜像
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        // 商城
         maven { url 'https://raw.githubusercontent.com/houhoudev/repository/master' }
     }
 }

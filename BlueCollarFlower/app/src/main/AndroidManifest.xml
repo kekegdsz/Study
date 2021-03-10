@@ -3,6 +3,7 @@
     package="com.kekegdsz.bluecollar">
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,6 +27,13 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="60487f00b8c8d45c1394d275" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="OPEN" />
     </application>
 
 </manifest>
