@@ -22,6 +22,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        debug {
+            storeFile file("./taokesdk.jks")
+            storePassword 'taokesdk'
+            keyAlias 'yz'
+            keyPassword 'taokesdk'
+        }
+        release {
+            storeFile file("./taokesdk.jks")
+            storePassword 'taokesdk'
+            keyAlias 'yz'
+            keyPassword 'taokesdk'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -32,14 +48,43 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'aars', 'libs'
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
+    //登陆
+    implementation(name:'alibabauth_core-2.0.0.11', ext:'aar')
+    implementation(name:'alibabauth_ext-2.0.0.11', ext:'aar')
+    implementation(name:'alibabauth_ui-2.0.0.11', ext:'aar')
+    //安全组件
+    implementation(name:'securityguardaar3-5.4.171', ext:'aar')
+    implementation(name:'securitybodyaar3-5.4.99', ext:'aar')
+    implementation(name:'avmpaar3-5.4.36', ext:'aar')
+    implementation(name:'sgmiddletieraar3-5.4.9', ext:'aar')
+    //Mtop
+    implementation files('libs/mtopsdk_allinone_open-3.1.2.5.jar')
+    //applink
+    implementation(name:'alibc_link_partner-4.1.15', ext:'aar')
+    //ut
+    implementation 'com.taobao.android:utdid4all:1.5.2'
+    implementation 'com.alibaba.mtl:app-monitor-sdk:2.6.4.5_for_bc'
+    // 电商基础组件
+    implementation(name:'AlibcTradeCommon-4.0.0.16', ext:'aar')
+    implementation(name:'AlibcTradeBiz-4.0.0.16', ext:'aar')
+    implementation(name:'nb_trade-4.0.0.16', ext:'aar')
+    implementation 'com.alibaba:fastjson:1.2.41@jar'
 }
