@@ -1,11 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        maven {
-            url 'https://maven.google.com'
-        }
-        mavenLocal()
-        mavenCentral()
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        jcenter()
         google()
 
     }
@@ -19,17 +16,12 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        jcenter()
         maven {
             url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
         }
-        jcenter()
         google()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-        mavenCentral()
     }
 }
 
