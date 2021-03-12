@@ -25,7 +25,7 @@ public class MainApplication extends Application {
 
             @Override
             public void onFailure(int code, String msg) {
-                Toast.makeText(MainApplication.this, "初始化失败:" + msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainApplication.this, "初始化失败:" + code + "==>" + msg, Toast.LENGTH_SHORT).show();
             }
         });
 

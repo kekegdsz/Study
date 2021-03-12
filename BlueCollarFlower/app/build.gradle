@@ -3,26 +3,17 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "29.0.1"
 
     defaultConfig {
         applicationId "com.kekegdsz.bluecollar"
         minSdkVersion 16
-        targetSdkVersion 30
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
     signingConfigs {
         debug {
             storeFile file("./taokesdk.jks")
@@ -37,6 +28,20 @@ android {
             keyPassword 'taokesdk'
         }
     }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -61,30 +66,36 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
-    //登陆
-    implementation(name:'alibabauth_core-2.0.0.11', ext:'aar')
-    implementation(name:'alibabauth_ext-2.0.0.11', ext:'aar')
-    implementation(name:'alibabauth_ui-2.0.0.11', ext:'aar')
+//登陆
+    implementation 'com.ali.auth.sdk:alibabauth_core:2.0.0.6@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ui:2.0.0.6@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ext:2.0.0.6@aar'
     //安全组件
-    implementation(name:'securityguardaar3-5.4.171', ext:'aar')
-    implementation(name:'securitybodyaar3-5.4.99', ext:'aar')
-    implementation(name:'avmpaar3-5.4.36', ext:'aar')
-    implementation(name:'sgmiddletieraar3-5.4.9', ext:'aar')
+    implementation(name: 'avmpaar3-5.4.36', ext: 'aar')
+    implementation(name: 'securitybodyaar3-5.4.99', ext: 'aar')
+    implementation(name: 'securityguardaar3-5.4.171', ext: 'aar')
+    implementation(name: 'sgmiddletieraar3-5.4.9', ext: 'aar')
+//    implementation 'com.taobao.android:securityguardaar3:5.4.171@aar'
+//    implementation 'com.taobao.android:securitybodyaar3:5.4.99@aar'
+//    implementation 'com.taobao.android:avmpaar3:5.4.36@aar'
+//    implementation 'com.taobao.android:sgmiddletieraar3:5.4.9@aar'
     //Mtop
+//    implementation 'com.taobao.android:mtopsdk_allinone_open:3.1.2.5@jar'
     implementation files('libs/mtopsdk_allinone_open-3.1.2.5.jar')
     //applink
-    implementation(name:'alibc_link_partner-4.1.15', ext:'aar')
+//    implementation 'com.alibaba.sdk.android:alibc_link_partner:4.1.15@aar'
+    implementation(name: 'alibc_link_partner-4.1.15', ext: 'aar')
     //ut
     implementation 'com.taobao.android:utdid4all:1.5.2'
     implementation 'com.alibaba.mtl:app-monitor-sdk:2.6.4.5_for_bc'
     // 电商基础组件
-    implementation(name:'AlibcTradeCommon-4.0.0.16', ext:'aar')
-    implementation(name:'AlibcTradeBiz-4.0.0.16', ext:'aar')
-    implementation(name:'nb_trade-4.0.0.16', ext:'aar')
-    implementation 'com.alibaba:fastjson:1.2.41@jar'
+    implementation 'com.alibaba.sdk.android:AlibcTradeCommon:4.0.0.15@aar'
+    implementation 'com.alibaba.sdk.android:AlibcTradeBiz:4.0.0.15@aar'
+    implementation 'com.alibaba.sdk.android:nb_trade:4.0.0.15@aar'
+    implementation 'com.alibaba:fastjson:1.1.71.android'
 }
