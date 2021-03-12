@@ -98,4 +98,5 @@ dependencies {
     implementation 'com.alibaba.sdk.android:AlibcTradeBiz:4.0.0.15@aar'
     implementation 'com.alibaba.sdk.android:nb_trade:4.0.0.15@aar'
     implementation 'com.alibaba:fastjson:1.1.71.android'
+
 }
